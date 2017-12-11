@@ -14,11 +14,6 @@ class Prototype implements Cloneable,Serializable {
 	private ArrayList<String> list = new ArrayList<>();
 	private int mInt;
 
-//	{
-//		mInt = 2 ;
-//		list.add("原型模式") ;
-//	}
-	
 	public ArrayList<String> getList() {
 		return list;
 	}
