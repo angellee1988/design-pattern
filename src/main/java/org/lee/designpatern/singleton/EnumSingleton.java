@@ -8,5 +8,6 @@ package org.lee.designpatern.singleton;
 public enum EnumSingleton {
 	INSTANCE;  
     public void whateverMethod() {  
+    	System.out.println("Ã¶¾Ùµ¥Àý");
     }  
 }
