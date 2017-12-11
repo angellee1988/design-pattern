@@ -4,16 +4,24 @@ import java.util.ArrayList;
 
 public class Client {
 	public static void main(String[] args) {
-		ConcretePrototype cp = new ConcretePrototype();
-		ConcretePrototype deepClonecp = (ConcretePrototype) cp.deepClone(cp);
-		ConcretePrototype clonecp = (ConcretePrototype) cp.clone();
-		deepClonecp.show();
+		Prototype cp = new Prototype();
 		
 		cp.setmInt(10);
 		ArrayList list = new ArrayList<>() ;
 		list.add("原型模式") ;
 		cp.setList(list);
-		deepClonecp.show();
 		
+		Prototype clonecp = cp.deepClone();
+//		Prototype clonecp = cp.clone();
+		
+		System.out.println("mInt:"+clonecp.getmInt());
+		System.out.println("list:"+clonecp.getList());
+		
+		cp.setmInt(20);
+		list.add("克隆原型模式") ;
+		cp.setList(list);
+		
+		System.out.println("mInt:"+clonecp.getmInt());
+		System.out.println("list:"+clonecp.getList());
 	}
 }

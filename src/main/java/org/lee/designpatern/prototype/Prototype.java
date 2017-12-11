@@ -52,22 +52,21 @@ class Prototype implements Cloneable,Serializable {
 	 * @param src
 	 * @return
 	 */
-	public Prototype deepClone(Object src) { // 使用序列化和反序列化实现深复制
-		Prototype prototype = null;
+	public Prototype deepClone() { // 使用序列化和反序列化实现深复制
 		try {
 			ByteArrayOutputStream bos = new ByteArrayOutputStream();
 			ObjectOutputStream oos = new ObjectOutputStream(bos);
-			oos.writeObject(src);
+			oos.writeObject(this);
 			byte[] bytes = bos.toByteArray();
 			ByteArrayInputStream bis = new ByteArrayInputStream(bytes);
 			ObjectInputStream ois = new ObjectInputStream(bis);
-			prototype = (Prototype) ois.readObject(); // 克隆好的对象
+			return (Prototype) ois.readObject(); // 克隆好的对象
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		return prototype;
+		return null;
 	}
-
+	
 }
