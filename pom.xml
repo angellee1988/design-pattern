@@ -3,4 +3,33 @@
   <groupId>org.lee</groupId>
   <artifactId>design-pattern</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+ 		 <!-- servlet 依赖. -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>jstl</artifactId>
+		    <version>1.2</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>javax.mail</groupId>
+		    <artifactId>mail</artifactId>
+		    <version>1.4.7</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>javax.ejb</groupId>
+		    <artifactId>ejb-api</artifactId>
+		    <version>3.0</version>
+		</dependency>
+  
+  
+  </dependencies>
 </project>
